@@ -1,0 +1,75 @@
+To capture image we have to execute the following command:
+raspistill -v -o test.jpg
+The display should show a 5-second preview from the camera and then take a picture,
+saved to the file test.jpg
+raspistill -t 2000 -o image.jpg
+raspistill -t 2000 -o image.jpg -w 640 -h 480
+raspistill -t 2000 -o image.jpg -q 5
+raspistill -t 2000 -o image.jpg –p 100,100,300,200
+raspistill -t 2000 -o image.png –e png
+Image parameter commands
+-?, --help : This help information
+-w, --width : Set image width
+-h, --height : Set image height
+-q, --quality : Set jpeg quality <0 to 100>
+-r, --raw : Add raw bayer data to jpeg metadata
+-o, --output : Output filename (to write to stdout, use '-o -'). If not specified, no file is saved
+-v, --verbose : Output verbose information during run
+-t, --timeout : Time (in ms) before takes picture and shuts down (if not specified, set to 5s)
+-th, --thumb : Set thumbnail parameters (x:y:quality)
+-d, --demo : Run a demo mode (cycle through range of camera options, no capture)
+-e, --encoding : Encoding to use for output file (jpg, bmp, gif, png)
+-x, --exif : EXIF tag to apply to captures (format as 'key=value')
+-tl, --timelapse : Timelapse mode. Takes a picture every ms
+-sh, --sharpness : Set image sharpness (-100 to 100)
+-co, --contrast : Set image contrast (-100 to 100)
+-br, --brightness : Set image brightness (0 to 100)
+-sa, --saturation : Set image saturation (-100 to 100)
+-ISO, --ISO : Set capture ISO
+-vs, --vstab : Turn on video stablisation
+-ev, --ev : Set EV compensation
+-ex, --exposure : Set exposure mode (see Notes)
+-awb, --awb : Set AWB mode (see Notes)
+-ifx, --imxfx : Set image effect (see Notes)
+-cfx, --colfx : Set colour effect (U:V)
+-mm, --metering : Set metering mode (see Notes)
+-rot, --rotation : Set image rotation (0-359)
+-hf, --hflip : Set horizontal flip
+-vf, --vflip : Set vertical flip
+Step 8:- Capturing video using camera
+To capture video we have to execute the following commands:
+raspivid -t 5000 -o video.h264
+raspivid -t 5000 -o video.h264 -b 3500000
+raspivid -t 5000 -o video.h264 -f 5
+Display camera output to display, and optionally saves an H264 capture at requested bitrate
+Video parameter commands
+-?, --help : This help information
+-w, --width : Set image width . Default 1920
+-h, --height : Set image height . Default 1080
+-b, --bitrate : Set bitrate. Use bits per second (e.g. 10MBits/s would be -b 10000000)
+-o, --output : Output filename (to write to stdout, use '-o -')
+-v, --verbose : Output verbose information during run
+-t, --timeout : Time (in ms) before takes picture and shuts down. If not specified, set to 5s
+-d, --demo : Run a demo mode (cycle through range of camera options, no capture)
+-fps, --framerate : Specify the frames per second to record
+-e, --penc : Display preview image *after* encoding (shows compression artifacts)
+Preview parameter commands
+-p, --preview : Preview window settings
+-f, --fullscreen : Fullscreen preview mode
+-n, --nopreview : Do not display a preview window
+Image parameter commands
+-sh, --sharpness : Set image sharpness (-100 to 100)
+-co, --contrast : Set image contrast (-100 to 100)
+-br, --brightness : Set image brightness (0 to 100)
+-sa, --saturation : Set image saturation (-100 to 100)
+-ISO, --ISO : Set capture ISO
+-vs, --vstab : Turn on video stablisation
+-ev, --ev : Set EV compensation
+-ex, --exposure : Set exposure mode (see Notes)
+-awb, --awb : Set AWB mode (see Notes)
+-ifx, --imxfx : Set image effect (see Notes)
+-cfx, --colfx : Set colour effect (U:V)
+-mm, --metering : Set metering mode (see Notes)
+-rot, --rotation : Set image rotation (0-359)
+-hf, --hflip : Set horizontal flip
+-vf, --vflip : Set vertical flip
