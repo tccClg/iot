@@ -35,4 +35,4 @@ while (True):
     plt.pause(.000001)
     cnt = cnt+1
     if(cnt>50):
-    val.pop(0)
+        val.pop(0)

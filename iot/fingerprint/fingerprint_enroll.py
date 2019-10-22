@@ -1,20 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-PyFingerprint
-Copyright (C) 2015 Bastian Raschke <bastian.raschke@posteo.de>
-All rights reserved.
-"""
-
 import time
 from pyfingerprint.pyfingerprint import PyFingerprint
-
-
-## Enrolls new finger
-##
-
-## Tries to initialize the sensor
 try:
     f = PyFingerprint('/dev/ttyUSB0', 57600, 0xFFFFFFFF, 0x00000000)
 
