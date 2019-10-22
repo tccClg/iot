@@ -1,5 +1,5 @@
 import datetime
-import teleport
+import telepot
 import time
 from telepot.loop import MessageLoop
 import RPi.GPIO as IO

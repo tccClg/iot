@@ -1,13 +1,8 @@
-
-
-
 import time
 import RPi.GPIO as GPIO
 import sys
 from threading import Thread
 from pyfingerprint.pyfingerprint import PyFingerprint
-
-
 
 GPIO.setwarnings(False)
 GPIO.cleanup()
